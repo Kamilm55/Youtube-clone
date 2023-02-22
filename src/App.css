@@ -1,39 +1,183 @@
-.App {
-  text-align: center;
+.videoCard{
+   width: 358px;
+    margin: 0px !important;
+    background-color: rgb(30 30 30) !important;
+    transition: .5s ease-in-out;
+}
+.videoCard:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.imgParent{
+    width: 100px;
+}
+.imgParent{
+    cursor: pointer;
+}
+.category{
+    opacity: 0.8;
+    transition: all .3s ease;
+    width: 95%;
+}
+.category:hover , .category:active  {
+    background-color:rgb(252 21 3) !important;
+    cursor: pointer;
+}
+.CaregoriesBar{
+    width: 220px ;
+    border-right: rgb(61 61 61) 1px solid;
+    margin: 10px !important;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 90px !important;
+    left: 0 !important;
+    height: 100vh;
+    display: inline-block;
+}
+.Feed{
+    display: flex;
+    justify-content: flex-end;
+    /* margin-top: 40px !important; */
+}
+.FeedRow{
+    width: 80vw;
+    justify-content: center;
+}
+.bi-check-circle-fill{
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 50%;
+    /* color: white !important; */
+    margin: 0 7px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media screen and (max-width:1200px) {
+    .CaregoriesBar{
+        display: flex;
+        height: 70px;
+        margin: 0 auto;
+        border: 0px ;
+        width: auto;
+        overflow: auto;
+        position: static;
+    }
+    .CaregoriesBar::-webkit-scrollbar {
+        width: 10px;/* it is not worked */
+        height: 6px;
+      }
+    .CaregoriesBar::-webkit-scrollbar-thumb {
+        background-color: #727171;
+        border-radius: 10px;
+        width: 5px ;
+      }
+    .CaregoriesBar::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    .category{
+       min-width: 150px;
+       justify-content: center;
+    }
+    .resParent{
+        flex-direction: column;
+    }
+    .FeedRow{
+        width: 100vw;
+    }
+    .react-player{
+        width: 100vw !important;
+        margin: 0;
+    }
+    .watchParent{
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto !important;
+    }
+    .watchParent > .Feed {
+        margin-top: 150px !important
+    }
+    .videoDetails > h1{
+        width:99% !important;
+    }
+    .videoDetails{
+        left:5px !important;
+    }
+    ::-webkit-scrollbar{
+        display: none !important;
+    }
+}
+.c-pointer:hover{
+    cursor: pointer;
+}
+.watchParent{
+    flex-direction: row !important;
+    justify-content: center;
+    height: 88vh;
+    overflow: hidden ;
+}
+.watchParent::-webkit-scrollbar{
+    display: none;
+}
+.watchParent > .Feed {
+    width: 380px;
+    overflow-y: auto !important;
+    height: 240vh !important;
+} 
+
+.watchParent > .Feed::-webkit-scrollbar{
+    display: none;
+}
+.loadingDiv{
+    width:90vw;
+    height: 70vh;
+}
+.bg-img{
+    background: linear-gradient(90deg, rgb(0, 238, 247) 0%, rgb(206, 3, 184) 100%, rgb(0, 212, 255) 100%);
+    background-image: linear-gradient(90deg, rgb(0, 238, 247) 0%, rgb(206, 3, 184) 100%, rgb(0, 212, 255) 100%);    width: 100%;
+    height: 40vh;
+    position: relative ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.avatar{
+    width: 180px !important;
+    height: 180px;
+    /* background-color: red; */
+    position: absolute;
+    bottom: -38%;
+    right: calc((100% - 180px)/2);
+}
+.Channel > .Feed{
+    margin: 220px auto !important;
+    justify-content: center;
+}
+.avatar-text{
+    position: absolute;
+    bottom: -180px;
+    z-index: 200;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.channel{
+    width: 358px;
+    background-color: black !important;
 }
-
-.App-link {
-  color: rgb(112, 76, 182);
+.channel:hover{
+    cursor: pointer;
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.card-header > .rounded-circle{
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    height: 200px !important;
+    width: 200px !important;
+    border: 1px solid white !important;
+}
+.watchParent{
+    position: relative;
+}
+.videoDetails{
+    position: absolute;
+    top:80%;
+    left:63px;
+}
+.videoDetails > h1{
+width: 65%;
 }
